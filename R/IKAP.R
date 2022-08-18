@@ -43,7 +43,7 @@ IKAP <- function(sobj, pcs = NA, pc.range = 20, k.max = NA, r.kmax.est = 1.5, ou
   }
   
   cat("Finding variable genes for clustering ... \n")
-  sobj <- FindVariableGenes(sobj, mean.function = ExpMean, dispersion.function = LogVMR, x.low.cutoff = 0.0125, x.high.cutoff = 3, y.cutoff = 0.5, do.plot = F)
+  sobj <- FindVariableFeatures(sobj, mean.function = ExpMean, dispersion.function = LogVMR, x.low.cutoff = 0.0125, x.high.cutoff = 3, y.cutoff = 0.5, do.plot = F)
   
   cat("Running PCA ... \n")
   if(is.na(pcs)){
